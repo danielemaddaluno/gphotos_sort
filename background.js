@@ -14,9 +14,7 @@ function checkForValidUrl(tabId, info, tab) {
 
     if(tab.url.match(url_p)) {
         // show the page action.
-        chrome.action.enable(tabId);
-    }else{
-        chrome.action.disable(tabId);
+        chrome.pageAction.show(tabId);
     }
 }
 
