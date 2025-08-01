@@ -13,8 +13,11 @@ function checkForValidUrl(tabId, info, tab) {
     }
 
     if(tab.url.match(url_p)) {
-        // show the page action.
-        chrome.pageAction.show(tabId);
+        // show the action button.
+        chrome.action.enable(tabId);
+    } else {
+        // hide the action button for non-matching URLs
+        chrome.action.disable(tabId);
     }
 }
 

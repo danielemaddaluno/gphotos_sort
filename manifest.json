@@ -42,12 +42,16 @@
         "default_title": "Google Photos Album Sort"
     },
     "permissions": [
-        "tabs"
+        "tabs",
+        "activeTab"
     ],
     "web_accessible_resources": [
         {
             "resources": ["content2.js"],
             "matches": ["https://photos.google.com/*"]
         }
+    ],
+    "host_permissions": [
+        "https://photos.google.com/*"
     ]
 }
